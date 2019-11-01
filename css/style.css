@@ -306,18 +306,123 @@ icon-bar ul {
 .credits ul {
     list-style-type: none;
     padding: 0;
-  }
-  
-  .credits a {
+}
+
+.credits a {
     font-size: .7em;
     text-decoration: none;
     color: var(--main-text-color);
-  }
-  
-  .credits a:hover {
+}
+
+.credits a:hover {
     background-color: var(--credit-hover-bg);
     color: var(--credit-hover-color);
     cursor: pointer;
-  }
+}
 
-  
+/* style aside images on fibonacci */
+.fib-aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fib-aside img {
+    width: 180px;
+    height: auto;
+}
+
+/* style table with fibonacci calculations */
+.calc-table table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid var(--calc-table-border);
+}
+
+.calc-table th,
+.cacl-table td {
+    border: 1px solid var(--calc-table-border);
+    text-align: left;
+    padding: 8px;
+}
+
+.calc-table tr:nth-child(even) {
+    background-color: var(--calc-table-border);
+}
+
+.calc-table caption {
+    caption-side: top;
+    text-align: left;
+    font-style: italic;
+}
+
+/* math presentation on fibonacci.html */
+.math {
+    margin: 20px auto;
+    padding: 10px 30px;
+    width: 200px;
+    background-color: var(--math-bg-color);
+    color: var(--math-color);
+}
+
+/* styling for responsive iframes */
+.resp-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+.resp-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* containers for media iframes */
+.frame-container {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.frame-container {
+    text-align: center;
+}
+
+
+.audio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* see notes below */
+
+    background-color: var(--nav-text-color);
+    align-items: center;
+}
+
+@media only screen and (min-width: 600px) {
+    .audio-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .audio-container iframe {
+        margin-top: 20px;
+    }
+}
+
+/* provide container styling for about.html */
+.learning-objectives {
+    margin: 20px;
+}
+
+.learning-objectives li {
+    font-family: var(--font-serif-titles);
+}
+
+.xkcd-container img {
+    width: 320px;
+    height: auto;
+}
